@@ -19,7 +19,7 @@ const Blog = ({data}) => {
         <Container sx={{display: 'flex', alignItems: 'center', mt: 10}}>
         <Grid sx={{display: 'flex', justifyContent: 'center'}} container spacing={4}>
           {data?.map((item) => (
-            <Grid sx={{display: 'flex', justifyContent: 'center'}} item xs={12} md={4}>
+            <Grid key={item.title} sx={{display: 'flex', justifyContent: 'center'}} item xs={12} md={4}>
               <PostCard post={item} />
             </Grid>
           ))}
